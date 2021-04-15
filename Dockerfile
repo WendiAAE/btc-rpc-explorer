@@ -3,7 +3,7 @@ WORKDIR /workspace
 COPY . .
 RUN npm install
 
-FROM node:8-alpine
+FROM node:12.22.0-alpine
 WORKDIR /workspace
 COPY --from=builder /workspace .
 RUN apk --update add git
